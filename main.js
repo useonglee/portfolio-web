@@ -26,11 +26,30 @@ navbar_menu.addEventListener("click", (event) => {
   scrollIntoView(link);
 });
 
+//TODO: Home 높이
+const home = document.querySelector("#home");
+const home_height = home.getBoundingClientRect().height;
+
 // TODO: Contact me 버튼 클릭시, Contact 메뉴로 이동
 const home_contact = document.querySelector(".home__contact");
 
 home_contact.addEventListener("click", () => {
   scrollIntoView("#contact");
+});
+
+// TODO: 맨 위로 가기 버튼
+const arrow_up = document.querySelector(".arrow-up");
+
+document.addEventListener("scroll", () => {
+  if (window.scrollY > home_height / 2) {
+    arrow_up.classList.add("visible");
+  } else {
+    arrow_up.classList.remove("visible");
+  }
+});
+
+arrow_up.addEventListener("click", () => {
+  scrollIntoView("#home");
 });
 
 // TODO: 해당 메뉴로 이동하는 함수 scrollIntoView 구현
