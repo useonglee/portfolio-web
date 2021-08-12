@@ -23,6 +23,18 @@ navbar_menu.addEventListener("click", (event) => {
     return;
   }
 
-  const scrollTo = document.querySelector(link);
-  scrollTo.scrollIntoView({ behavior: "smooth" });
+  scrollIntoView(link);
 });
+
+// TODO: Contact me 버튼 클릭시, Contact 메뉴로 이동
+const home_contact = document.querySelector(".home__contact");
+
+home_contact.addEventListener("click", () => {
+  scrollIntoView("#contact");
+});
+
+// TODO: 해당 메뉴로 이동하는 함수 scrollIntoView 구현
+const scrollIntoView = (selector) => {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
+};
