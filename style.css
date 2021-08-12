@@ -252,3 +252,38 @@ p {
   height: 2px;
   color: var(--color-white);
 }
+
+/* Arrow up */
+.arrow-up {
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  transition: var(--animation-duration) ease-in-out;
+  width: 40px;
+  height: 40px;
+  font-size: var(--font-small);
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.arrow-up:hover {
+  color: var(--color-white);
+  background-color: var(--color-purple);
+}
+
+.arrow-up .fas {
+  font-size: var(--font-regular);
+  margin-bottom: 2px;
+}
