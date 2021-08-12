@@ -1,0 +1,98 @@
+/* ========== Font ========== */
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+/* ========== Global ========== */
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-black: #070707;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-dark-grey: #4d4d4d;
+  --color-blue: #79aace;
+  --color-orange: #feb546;
+  --color-purple: #7943e6;
+
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Size */
+  --size-border-radius: 4px;
+
+  /* Animation */
+  --animation-duration: all 0.2s;
+}
+
+/* ========== Universal tags ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  outline: none;
+}
+
+body {
+  line-height: 1;
+  font-family: "NanumSquare", sans-serif;
+}
+
+nav,
+ul,
+menu {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  background: transparent;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* ========== Typography ========== */
+h1 {
+  line-height: 1.2em;
+  margin: 16px 0px;
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+}
+
+h2 {
+  margin: 8px 0px;
+  font-size: var(--font-semi-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+}
+
+h3 {
+  margin: 8px 0px;
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+}
+
+p {
+  margin: 4px 0px;
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+}
