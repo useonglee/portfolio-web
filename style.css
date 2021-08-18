@@ -133,6 +133,15 @@ p {
   color: var(--color-purple);
 }
 
+.navbar__toggle-btn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  top: 14px;
+  font-size: var(--font-medium);
+  color: var(--color-white);
+}
+
 /* ========== Home ========== */
 #home {
   background: url("images/background.png") center/cover no-repeat;
@@ -286,4 +295,23 @@ p {
 .arrow-up .fas {
   font-size: var(--font-regular);
   margin-bottom: 2px;
+}
+
+/* ========== Responsive ========== */
+@media screen and (max-width: 1024px) {
+  .navbar__toggle-btn {
+    display: block;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar__menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
 }
