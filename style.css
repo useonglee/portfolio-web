@@ -114,7 +114,7 @@ p {
   background-color: var(--color-black);
 }
 
-.navbar__menu {
+.navbar__menu-list {
   display: flex;
 }
 
@@ -306,12 +306,20 @@ p {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-black);
   }
 
   .navbar__menu {
     display: none;
-    flex-direction: column;
     width: 100%;
+  }
+
+  .navbar__menu-list {
+    flex-direction: column;
     text-align: center;
+  }
+
+  .navbar__menu.open {
+    display: block;
   }
 }
