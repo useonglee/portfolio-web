@@ -26,7 +26,15 @@ navbar_menu.addEventListener("click", (event) => {
   scrollIntoView(link);
 });
 
-//TODO: Home 높이
+// TODO: 반응형 navbar 토글 버튼 목록
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+
+navbarToggleBtn.addEventListener("click", () => {
+  console.log("click");
+  navbar_menu.classList.toggle("open");
+});
+
+// TODO: Home 높이
 const home = document.querySelector("#home");
 const home_height = home.getBoundingClientRect().height;
 
