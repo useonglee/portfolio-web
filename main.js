@@ -61,12 +61,6 @@ arrow_up.addEventListener("click", () => {
   scrollIntoView("#home");
 });
 
-// TODO: 해당 메뉴로 이동하는 함수 scrollIntoView 구현
-const scrollIntoView = (selector) => {
-  const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({ behavior: "smooth" });
-};
-
 // TODO: 메뉴 기능 활성화
 const sectionIds = [
   "#home",
@@ -91,6 +85,13 @@ function selectNavItem(selected) {
   selectedNavItem = selected;
   selectedNavItem.classList.add("active");
 }
+
+// TODO: 해당 메뉴로 이동하는 함수 scrollIntoView 구현
+const scrollIntoView = (selector) => {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
+  selectNavItem(navItems[sectionIds.indexOf(selector)]);
+};
 
 const observerCallback = (entries, observer) => {
   entries.forEach((entry) => {
