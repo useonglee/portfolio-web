@@ -262,6 +262,10 @@ p {
   color: var(--color-white);
 }
 
+.project.invisible {
+  display: none;
+}
+
 /* Arrow up */
 .arrow-up {
   cursor: pointer;
