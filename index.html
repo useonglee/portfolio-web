@@ -27,6 +27,7 @@
 
     <!-- JS script -->
     <script src="main.js" defer></script>
+    <script src="project.js" defer></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -159,16 +160,22 @@
     <!-- Project -->
     <section id="project" class="section">
       <h1>Projects</h1>
-      <p></p>
+      <p>소개글</p>
       <div class="project__categories">
-        <button class="category__btn active">All</button>
-        <button class="category__btn">Final Project</button>
-        <button class="category__btn">First Project</button>
-        <button class="category__btn">Personal Project</button>
+        <button class="category__btn active" data-filter="*">All</button>
+        <button class="category__btn" data-filter="final-project">
+          Final Project
+        </button>
+        <button class="category__btn" data-filter="first-project">
+          First Project
+        </button>
+        <button class="category__btn" data-filter="persnal-project">
+          Personal Project
+        </button>
       </div>
 
       <div class="project__items">
-        <a href="" class="project" target="_blank" data-type="reciper">
+        <a href="" class="project" target="_blank" data-type="final-project">
           <img
             src="images/project_reciper.png"
             alt="Reciper"
@@ -180,7 +187,7 @@
             <span>더 자세히 보려면 클릭하세요!</span>
           </div>
         </a>
-        <a href="" class="project" target="_blank" data-type="trollo">
+        <a href="" class="project" target="_blank" data-type="first-project">
           <img
             src="images/project_trollo.jpg"
             alt="Trollo"
@@ -195,7 +202,7 @@
             <span>더 자세히 보려면 클릭하세요!</span>
           </div>
         </a>
-        <a href="" class="project" target="_blank" data-type="portfolio">
+        <a href="" class="project" target="_blank" data-type="persnal-project">
           <img
             src="images/project_portfolio.png"
             alt="Portfolio"
