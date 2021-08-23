@@ -4,8 +4,10 @@
 const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
 
-document.addEventListener("scroll", () => {
-  if (window.scrollY > navbarHeight) {
+const container = document.querySelector("#container");
+
+container.addEventListener("scroll", () => {
+  if (container.scrollTop > navbarHeight) {
     navbar.classList.add("navbar--open");
   } else {
     navbar.classList.remove("navbar--open");
@@ -13,9 +15,9 @@ document.addEventListener("scroll", () => {
 });
 
 // TODO: navbar menu 클릭 시, 해당 메뉴로 이동한다.
-const navbar_menu = document.querySelector(".navbar__menu");
+const navbarMenu = document.querySelector(".navbar__menu");
 
-navbar_menu.addEventListener("click", (event) => {
+navbarMenu.addEventListener("click", (event) => {
   const target = event.target;
   const link = target.dataset.link;
 
@@ -23,7 +25,7 @@ navbar_menu.addEventListener("click", (event) => {
     return;
   }
 
-  navbar_menu.classList.remove("open");
+  navbarMenu.classList.remove("open");
   scrollIntoView(link);
   selectNavItem(target);
 });
@@ -32,32 +34,32 @@ navbar_menu.addEventListener("click", (event) => {
 const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
 
 navbarToggleBtn.addEventListener("click", () => {
-  navbar_menu.classList.toggle("open");
+  navbarMenu.classList.toggle("open");
 });
 
 // TODO: Home 높이
 const home = document.querySelector("#home");
-const home_height = home.getBoundingClientRect().height;
+const homeHeight = home.getBoundingClientRect().height;
 
 // TODO: Contact me 버튼 클릭시, Contact 메뉴로 이동
-const home_contact = document.querySelector(".home__contact");
+const homeContact = document.querySelector(".home__contact");
 
-home_contact.addEventListener("click", () => {
+homeContact.addEventListener("click", () => {
   scrollIntoView("#contact");
 });
 
 // TODO: 맨 위로 가기 버튼
-const arrow_up = document.querySelector(".arrow-up");
+const arrowUp = document.querySelector(".arrow-up");
 
-document.addEventListener("scroll", () => {
-  if (window.scrollY > home_height / 2) {
-    arrow_up.classList.add("visible");
+container.addEventListener("scroll", () => {
+  if (container.scrollTop > homeHeight / 2) {
+    arrowUp.classList.add("visible");
   } else {
-    arrow_up.classList.remove("visible");
+    arrowUp.classList.remove("visible");
   }
 });
 
-arrow_up.addEventListener("click", () => {
+arrowUp.addEventListener("click", () => {
   scrollIntoView("#home");
 });
 
@@ -79,19 +81,19 @@ const navItems = sectionIds.map((id) =>
 let selectedNavIndex = 0;
 let selectedNavItem = navItems[0];
 
-// TODO: 현재 메뉴 활성화
-function selectNavItem(selected) {
-  selectedNavItem.classList.remove("active");
-  selectedNavItem = selected;
-  selectedNavItem.classList.add("active");
-}
-
 // TODO: 해당 메뉴로 이동하는 함수 scrollIntoView 구현
 const scrollIntoView = (selector) => {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
   selectNavItem(navItems[sectionIds.indexOf(selector)]);
 };
+
+// TODO: 현재 메뉴 활성화
+function selectNavItem(selected) {
+  selectedNavItem.classList.remove("active");
+  selectedNavItem = selected;
+  selectedNavItem.classList.add("active");
+}
 
 const observerCallback = (entries, observer) => {
   entries.forEach((entry) => {
@@ -105,6 +107,8 @@ const observerCallback = (entries, observer) => {
         // 위로 올릴 경우
         selectedNavIndex = index - 1;
       }
+
+      setTimeout(() => selectNavItem(navItems[selectedNavIndex]), 400);
     }
   });
 };
@@ -118,15 +122,12 @@ const observerOptions = {
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 sections.forEach((section) => observer.observe(section));
 
-window.addEventListener("wheel", () => {
+container.addEventListener("wheel", () => {
   // 스크롤이 맨 위에 있다면 home 메뉴 활성화
-  if (window.scrollY === 0) {
+  if (container.scrollTop === 0) {
     selectedNavIndex = 0;
-  } else if (
+  } else if (4745 < container.scrollTop) {
     // 스크롤이 맨 밑에 있다면 contact 메뉴 활성화
-    window.scrollY + window.innerHeight ===
-    document.body.clientHeight
-  ) {
     selectedNavIndex = navItems.length - 1;
   }
 
