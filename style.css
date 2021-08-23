@@ -209,6 +209,8 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: var(--animation-duration) ease-out;
 }
 
 .project {
@@ -264,6 +266,11 @@ p {
 
 .project.invisible {
   display: none;
+}
+
+.project__items.project-animation {
+  opacity: 0;
+  transform: scale(0.95) translateY(40px);
 }
 
 /* Arrow up */
