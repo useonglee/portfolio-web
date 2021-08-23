@@ -7,13 +7,12 @@ const projects = document.querySelectorAll(".project");
 
 projectCategoriesBtn.addEventListener("click", (event) => {
   const filter = event.target.dataset.filter;
-  console.log(filter);
 
   if (filter === null) {
     return;
   }
 
-  projectCategoriesBtn.classList.add("project-animation");
+  projcetItems.classList.add("project-animation");
 
   setTimeout(() => {
     projects.forEach((project) => {
@@ -24,6 +23,6 @@ projectCategoriesBtn.addEventListener("click", (event) => {
       }
     });
 
-    projectCategoriesBtn.classList.remove("project-animation");
-  }, 300);
+    projcetItems.classList.remove("project-animation");
+  }, 100);
 });
