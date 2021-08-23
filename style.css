@@ -142,6 +142,16 @@ p {
   color: var(--color-white);
 }
 
+#container {
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+}
+
+.snap {
+  scroll-snap-align: center;
+}
+
 /* ========== Home ========== */
 #home {
   background: url("images/background.png") center/cover no-repeat;
