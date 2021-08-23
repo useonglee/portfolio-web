@@ -12,6 +12,11 @@ projectCategoriesBtn.addEventListener("click", (event) => {
     return;
   }
 
+  // TODO: 프로젝트 메뉴 활성화
+  const active = document.querySelector(".category__btn.active");
+  active.classList.remove("active");
+  event.target.classList.add("active");
+
   projcetItems.classList.add("project-animation");
 
   setTimeout(() => {
