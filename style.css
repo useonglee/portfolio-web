@@ -283,6 +283,27 @@ p {
   transform: scale(0.95) translateY(40px);
 }
 
+/* ========== Testimonials ========== */
+#slide__wrap {
+  position: relative;
+  width: 400px;
+  margin: auto;
+  padding-bottom: 30px;
+}
+
+.slide__box {
+  width: 100%;
+  margin: auto;
+  overflow-x: hidden;
+}
+
+.slide__content {
+  display: table;
+  float: left;
+  width: 400px;
+  height: 400px;
+}
+
 /* Arrow up */
 .arrow-up {
   cursor: pointer;
