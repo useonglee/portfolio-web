@@ -190,6 +190,10 @@ p {
   text-align: center;
 }
 
+.section > p {
+  margin: 20px 0 40px 0;
+}
+
 /* ========== About ========== */
 
 /* ========== Skills ========== */
@@ -286,9 +290,10 @@ p {
 /* ========== Testimonials ========== */
 #slide__wrap {
   position: relative;
-  width: 400px;
+  width: 800px;
   margin: auto;
-  padding-bottom: 30px;
+  border: 1px solid var(--color-dark-white);
+  border-radius: var(--size-border-radius);
 }
 
 .slide__box {
@@ -298,13 +303,50 @@ p {
 }
 
 .slide__content {
-  display: table;
+  /* display: table; */
   float: left;
-  width: 400px;
-  height: 400px;
+  width: 800px;
+  padding: 32px;
+  text-align: left;
 }
 
-/* Arrow up */
+.slide__title {
+  font-size: var(--font-regular);
+}
+
+.slide__description {
+  line-height: 1.5rem;
+  margin: 12px 0 32px 0;
+  padding: 12px;
+  border: 1px solid var(--color-dark-white);
+  border-radius: var(--size-border-radius);
+}
+
+.slide__pair {
+  margin: 40px 0 40px 0;
+  text-align: center;
+}
+
+.slide__review-origin {
+  margin-right: 8px;
+  text-align: right;
+}
+
+.slide__btn {
+  position: absolute;
+  top: 280px;
+  font-size: var(--font-large);
+}
+
+.slide__btn.prev {
+  left: -80px;
+}
+
+.slide__btn.next {
+  right: -80px;
+}
+
+/* ========== Arrow up ========== */
 .arrow-up {
   cursor: pointer;
   opacity: 0;
