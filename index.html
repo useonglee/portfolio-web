@@ -24,11 +24,16 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./src/navbar/style.css" />
+    <link rel="stylesheet" href="./src/home/style.css" />
+    <link rel="stylesheet" href="./src/project/style.css" />
+    <link rel="stylesheet" href="./src/testimonials/style.css" />
 
     <!-- JS script -->
-    <script src="main.js" defer></script>
-    <script src="project.js" defer></script>
-    <script src="testimonials.js" defer></script>
+    <script src="./src/navbar/main.js" defer></script>
+    <script src="./src/home/main.js" defer></script>
+    <script src="./src/project/main.js" defer></script>
+    <script src="./src/testimonials/main.js" defer></script>
   </head>
   <body>
     <main id="container">
@@ -256,6 +261,13 @@
                   2020.01.30 코드스테이츠 IM28 김*정님
                 </div>
                 <div class="slide__review-origin">원본 보기</div>
+                <!-- Modal -->
+                <div id="modal" class="modal__overlay">
+                  <div class="modal__window">
+                    <i class="fas fa-times"></i>
+                    <div class="modal__review"></div>
+                  </div>
+                </div>
               </div>
               <div class="slide__content slide02">
                 <div class="slide__title">잘한 점</div>

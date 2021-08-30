@@ -1,0 +1,56 @@
+@import "../../style.css";
+
+/* ========== Navbar ========== */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  transition: var(--animation-duration) ease-in-out;
+  width: 100%;
+  padding: 4px 48px;
+  background-color: transparent;
+}
+
+#navbar.navbar--open {
+  background-color: var(--color-black);
+}
+
+.navbar__menu-list {
+  display: flex;
+}
+
+.navbar__menu__item {
+  cursor: pointer;
+  padding: 8px 12px;
+  color: var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
+.navbar__menu__item.active {
+  border: 1px solid var(--color-white);
+}
+
+.navbar__menu__item:hover {
+  color: var(--color-purple);
+}
+
+.navbar__toggle-btn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  top: 14px;
+  font-size: var(--font-medium);
+  color: var(--color-white);
+}
+
+#container {
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+}
+
+.snap {
+  scroll-snap-align: center;
+}

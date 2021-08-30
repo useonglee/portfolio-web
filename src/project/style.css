@@ -1,0 +1,90 @@
+@import "../../style.css";
+
+/* ========== Project ========== */
+.project__categories {
+  margin: 40px;
+}
+
+.category__btn {
+  width: 200px;
+  height: 40px;
+  margin: 2px;
+  font-size: var(--font-regular);
+  border: 1px solid var(--color-dark-white);
+  border-radius: var(--size-border-radius);
+}
+
+.category__btn.active,
+.category__btn:hover {
+  transition: var(--animation-duration) ease-in;
+  color: var(--color-white);
+  background-color: var(--color-purple);
+}
+
+.project__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 1;
+  transition: var(--animation-duration) ease-out;
+}
+
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 300px;
+  height: 260px;
+  margin: 12px;
+  background-color: var(--color-light-white);
+}
+
+.project__img {
+  max-width: 100%;
+  height: 100%;
+}
+
+.project__description {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(10px);
+  transition: var(--animation-duration) ease-in;
+  width: 100%;
+  height: 100%;
+  color: var(--color-white);
+  background-color: black;
+}
+
+.project:hover .project__description {
+  opacity: 0.8;
+  transform: translateY(0px);
+}
+
+.project__description h3 {
+  color: var(--color-white);
+}
+
+.project__description h3:after {
+  content: "";
+  display: block;
+  position: relative;
+  left: 50%;
+  width: 26px;
+  height: 2px;
+  color: var(--color-white);
+}
+
+.project.invisible {
+  display: none;
+}
+
+.project__items.project-animation {
+  opacity: 0;
+  transform: scale(0.95) translateY(40px);
+}

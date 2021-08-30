@@ -1,0 +1,43 @@
+@import "../../style.css";
+
+/* ========== Home ========== */
+#home {
+  background: url("../../images/background.png") center/cover no-repeat;
+  height: 100vh;
+  padding: 160px;
+  text-align: center;
+}
+
+.home__avatar {
+  object-fit: cover;
+  width: 260px;
+  height: 260px;
+  margin-bottom: 16px;
+  border-radius: 20px;
+}
+
+.home__title,
+.home__description {
+  color: var(--color-white);
+}
+
+.home__contact {
+  margin-top: 24px;
+  padding: 8px 12px;
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
+/* Section Common */
+.section {
+  margin: auto;
+  max-width: 1200px;
+  height: 100vh;
+  padding: 60px;
+  text-align: center;
+}
+
+.section > p {
+  margin: 20px 0 40px 0;
+}
