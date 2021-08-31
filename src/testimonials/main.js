@@ -97,8 +97,7 @@ function modalActive(modalBtn) {
         modal.style.display = "flex";
 
         // TODO: 모달창 닫기
-        const closeBtn = document.querySelector("#modal__close-btn");
-        console.log(closeBtn);
+        const closeBtn = modal.childNodes[1].firstElementChild;
 
         closeBtn.addEventListener("click", () => {
           modal.style.display = "none";
