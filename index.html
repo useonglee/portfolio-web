@@ -235,7 +235,7 @@
         <p>코드스테이츠 수강 중에 만났던 페어분들의 피드백입니다.</p>
         <div id="slide__wrap">
           <div class="slide__box">
-            <div class="slide__list clearfix">
+            <div class="slide__list">
               <div class="slide__content slide01">
                 <div class="slide__title">잘한 점</div>
                 <div class="slide__description">
@@ -260,14 +260,9 @@
                 <div class="slide__pair">
                   2020.01.30 코드스테이츠 IM28 김*정님
                 </div>
-                <div class="slide__review-origin">원본 보기</div>
-                <!-- Modal -->
-                <div id="modal" class="modal__overlay">
-                  <div class="modal__window">
-                    <i class="fas fa-times"></i>
-                    <div class="modal__review"></div>
-                  </div>
-                </div>
+                <button class="modal__btn" data-filter="slide01">
+                  원본 보기
+                </button>
               </div>
               <div class="slide__content slide02">
                 <div class="slide__title">잘한 점</div>
@@ -289,7 +284,9 @@
                 <div class="slide__pair">
                   2020.02.07 코드스테이츠 IM28 이*주님
                 </div>
-                <div class="slide__review-origin">원본 보기</div>
+                <button class="modal__btn" data-filter="slide02">
+                  원본 보기
+                </button>
               </div>
               <div class="slide__content slide03">
                 <div class="slide__title">잘한 점</div>
@@ -309,7 +306,9 @@
                 <div class="slide__pair">
                   2020.02.20 코드스테이츠 IM28 공*택님
                 </div>
-                <div class="slide__review-origin">원본 보기</div>
+                <button class="modal__btn" data-filter="slide03">
+                  원본 보기
+                </button>
               </div>
               <div class="slide__content slide04">
                 <div class="slide__title">잘한 점</div>
@@ -346,7 +345,9 @@
                 <div class="slide__pair">
                   2020.02.25 코드스테이츠 IM28 안*원님
                 </div>
-                <div class="slide__review-origin">원본 보기</div>
+                <button class="modal__btn" data-filter="slide04">
+                  원본 보기
+                </button>
               </div>
               <div class="slide__content slide05">
                 <div class="slide__title">잘한 점</div>
@@ -383,7 +384,7 @@
                 <div class="slide__pair">
                   2020.04.08 코드스테이츠 IM28 정*이님
                 </div>
-                <div class="slide__review-origin">원본 보기</div>
+                <button class="modal__btn" data-filter="slide05">원본 보기</button>
               </div>
               <div class="slide__content slide06">
                 <div class="slide__title">잘한 점</div>
@@ -404,7 +405,7 @@
                 <div class="slide__pair">
                   2020.08.12 네이버 특별 심화반 2기 오*영님
                 </div>
-                <div class="slide__review-origin">원본 보기</div>
+                <button class="modal__btn" data-filter="slide06">원본 보기</butt>
               </div>
               <div class="slide__content slide07">
                 <div class="slide__title">잘한 점</div>
@@ -429,7 +430,7 @@
                 <div class="slide__pair">
                   2020.08.13 네이버 특별 심화반 2기 성*민님
                 </div>
-                <div class="slide__review-origin">원본 보기</div>
+                <button class="modal__btn" data-filter="slide07">원본 보기</button>
               </div>
               <div class="slide__content slide08">
                 <div class="slide__title">잘한 점</div>
@@ -449,7 +450,7 @@
                 <div class="slide__pair">
                   2020.08.27 네이버 특별 심화반 2기 성*민님
                 </div>
-                <div class="slide__review-origin">원본 보기</div>
+                <button class="modal__btn" data-filter="slide08">원본 보기</button>
               </div>
             </div>
           </div>
@@ -463,6 +464,119 @@
           </div>
           <ul class="slide__pagination"></ul>
         </div>
+        <!-- Modal -->
+        <section id="modal" class="modal__overlay" data-type="slide01">
+          <div class="modal__window">
+            <i id="modal__close-btn" class="fas fa-times"></i>
+            <div class="modal__review">
+              <figure>
+                <img
+                  src="./images/pair_review/pair_review01.png"
+                  alt="pair review no.1"
+                />
+                <figcaption>2020.01.30 코드스테이츠 IM28 김*정님</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+        <section id="modal" class="modal__overlay" data-type="slide02">
+          <div class="modal__window">
+            <i id="modal__close-btn" class="fas fa-times"></i>
+            <div class="modal__review">
+              <figure>
+                <img
+                  src="./images/pair_review/pair_review02.png"
+                  alt="pair review no.2"
+                />
+                <figcaption>2020.02.07 코드스테이츠 IM28 이*주님</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+        <section id="modal" class="modal__overlay" data-type="slide03">
+          <div class="modal__window">
+            <i id="modal__close-btn" class="fas fa-times"></i>
+            <div class="modal__review">
+              <figure>
+                <img
+                  src="./images/pair_review/pair_review03.png"
+                  alt="pair review no.3"
+                />
+                <figcaption>2020.02.20 코드스테이츠 IM28 공*택님</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+        <section id="modal" class="modal__overlay" data-type="slide04">
+          <div class="modal__window">
+            <i id="modal__close-btn" class="fas fa-times"></i>
+            <div class="modal__review">
+              <figure>
+                <img
+                  src="./images/pair_review/pair_review04.png"
+                  alt="pair review no.4"
+                />
+                <figcaption>2020.02.25 코드스테이츠 IM28 안*원님</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+        <section id="modal" class="modal__overlay" data-type="slide05">
+          <div class="modal__window">
+            <i id="modal__close-btn" class="fas fa-times"></i>
+            <div class="modal__review">
+              <figure>
+                <img
+                  src="./images/pair_review/pair_review05.png"
+                  alt="pair review no.5"
+                />
+                <figcaption>2020.04.08 코드스테이츠 IM28 정*이님</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+        <section id="modal" class="modal__overlay" data-type="slide06">
+          <div class="modal__window">
+            <i id="modal__close-btn" class="fas fa-times"></i>
+            <div class="modal__review">
+              <figure>
+                <img
+                  src="./images/pair_review/pair_review06.png"
+                  alt="pair review no.6"
+                />
+                <figcaption>2020.08.12 네이버 특별 심화반 2기 오*영님</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+        <section id="modal" class="modal__overlay" data-type="slide07">
+          <div class="modal__window">
+            <i id="modal__close-btn" class="fas fa-times"></i>
+            <div class="modal__review">
+              <figure>
+                <img
+                  src="./images/pair_review/pair_review07.png"
+                  alt="pair review no.7"
+                />
+                <figcaption>2020.08.13 네이버 특별 심화반 2기 성*민님</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+        <section id="modal" class="modal__overlay" data-type="slide08">
+          <div class="modal__window">
+            <i id="modal__close-btn" class="fas fa-times"></i>
+            <div class="modal__review">
+              <figure>
+                <img
+                  src="./images/pair_review/pair_review08.png"
+                  alt="pair review no.8"
+                />
+                <figcaption>2020.08.27 네이버 특별 심화반 2기 성*민님</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
       </section>
 
       <!-- Contact -->
