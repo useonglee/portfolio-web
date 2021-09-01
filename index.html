@@ -26,12 +26,14 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./src/navbar/style.css" />
     <link rel="stylesheet" href="./src/home/style.css" />
+    <link rel="stylesheet" href="./src/about/style.css">
     <link rel="stylesheet" href="./src/project/style.css" />
     <link rel="stylesheet" href="./src/testimonials/style.css" />
 
     <!-- JS script -->
     <script src="./src/navbar/main.js" defer></script>
     <script src="./src/home/main.js" defer></script>
+    <script src="./src/about/main.js" defer></script>
     <script src="./src/project/main.js" defer></script>
     <script src="./src/testimonials/main.js" defer></script>
   </head>
@@ -77,22 +79,20 @@
       <!-- About -->
       <section id="about" class="section snap">
         <h1>About</h1>
-        <p></p>
-        <div class="about__majors">
+        <p>소개글</p>
+        <div class="about__container">
+          <div class="about__question">
+            <div class="about__question-title">Question</div>
+            <div class="about__question content">
+              <div class="content-question">Q. 개발자가 되고 싶은 이유가 무엇인가요?</div>
+              <div class="content-answer"></div>
+              <div class="content-question">Q. 왜 프론트엔드 개발자가 되고 싶은가요?</div>
+              <div class="content-answer"></div>
+            </div>
+          </div>
           <div class="about__education">
-            <div class="education__icon"></div>
-            <div class="education__title">Education</div>
-            <div class="education__list"></div>
-          </div>
-          <div class="about__studies">
-            <div class="studies__icon"></div>
-            <div class="studies__title">Studies</div>
-            <div class="studies__list"></div>
-          </div>
-          <div class="about__career">
-            <div class="career__icon"></div>
-            <div class="career__title">Career</div>
-            <div class="career__list"></div>
+            <div class="about__education-title">Education</div>
+            <div class="about__education content"></div>
           </div>
         </div>
       </section>
