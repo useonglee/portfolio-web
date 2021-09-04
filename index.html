@@ -24,6 +24,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./src/darkmode/style.css">
     <link rel="stylesheet" href="./src/navbar/style.css" />
     <link rel="stylesheet" href="./src/home/style.css" />
     <link rel="stylesheet" href="./src/about/style.css">
@@ -31,6 +32,7 @@
     <link rel="stylesheet" href="./src/testimonials/style.css" />
 
     <!-- JS script -->
+    <script src="./src/darkmode/main.js" defer></script>
     <script src="./src/navbar/main.js" defer></script>
     <script src="./src/home/main.js" defer></script>
     <script src="./src/about/main.js" defer></script>
@@ -591,6 +593,10 @@
         <p class="contact__rights">2021 Useong Lee - All rights reserved</p>
       </section>
 
+      <!-- Dark Mode -->
+        <input id="darkmode__btn" type="checkbox"></input>
+        <label id="darkmode__label" for="darkmode__btn"></label>
+      
       <!-- Arrow up -->
       <button class="arrow-up">
         <i class="fas fa-arrow-up"></i>
