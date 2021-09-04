@@ -10,7 +10,8 @@
   height: 40px;
   margin: 2px;
   font-size: var(--font-regular);
-  border: 1px solid var(--color-dark-white);
+  color: var(--color);
+  border: 1px solid var(--color);
   border-radius: var(--size-border-radius);
 }
 

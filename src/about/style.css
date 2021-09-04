@@ -7,6 +7,7 @@
   flex-direction: row;
   position: relative;
   top: 60px;
+  color: var(--color);
 }
 
 .about__container > div {
@@ -17,9 +18,9 @@
 
 /* about title */
 .about__container > div :nth-child(odd) {
+  margin-bottom: 12px;
   font-size: var(--font-regular);
   font-weight: var(--weight-semi-bold);
-  margin-bottom: 12px;
 }
 
 /* about content */
