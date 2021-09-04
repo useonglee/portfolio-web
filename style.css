@@ -14,6 +14,7 @@
   --color-blue: #79aace;
   --color-orange: #feb546;
   --color-purple: #7943e6;
+  --color-green: #36d169;
 
   /* Font size */
   --font-large: 48px;
@@ -97,9 +98,38 @@ p {
   color: var(--color-black);
 }
 
+/* ========== scroll snap ========== */
+#container {
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+}
+
+.snap {
+  scroll-snap-align: center;
+}
+
+/* Section Common */
+.section {
+  margin: auto;
+  max-width: 1200px;
+  height: 100vh;
+  padding: 60px;
+  color: var(--color);
+  text-align: center;
+}
+
+.section > p {
+  margin: 20px 0 40px 0;
+  color: var(--color);
+}
+
+.section > h1 {
+  color: var(--color);
+}
+
 /* ========== Arrow up ========== */
 .arrow-up {
-  cursor: pointer;
   opacity: 0;
   pointer-events: none;
   display: flex;
@@ -108,13 +138,15 @@ p {
   align-items: center;
   position: fixed;
   bottom: 32px;
-  right: 32px;
+  right: 52px;
   transition: var(--animation-duration) ease-in-out;
   width: 40px;
   height: 40px;
   font-size: var(--font-small);
+  color: var(--color);
   border-radius: 50%;
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  background-color: var(--nav);
 }
 
 .arrow-up.visible {
@@ -123,38 +155,11 @@ p {
 }
 
 .arrow-up:hover {
-  color: var(--color-white);
   background-color: var(--color-purple);
+  color: var(--color-light-white);
 }
 
 .arrow-up .fas {
   font-size: var(--font-regular);
   margin-bottom: 2px;
-}
-
-/* ========== Responsive ========== */
-@media screen and (max-width: 1024px) {
-  .navbar__toggle-btn {
-    display: block;
-  }
-
-  #navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: var(--color-black);
-  }
-
-  .navbar__menu {
-    display: none;
-    width: 100%;
-  }
-
-  .navbar__menu-list {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .navbar__menu.open {
-    display: block;
-  }
 }
