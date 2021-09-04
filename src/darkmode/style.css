@@ -1,0 +1,56 @@
+@import "../../style.css";
+
+/* ========== Dark Mode ========== */
+:root[color-theme="light"] {
+  --background: var(--color-white);
+  --nav: var(--color-white);
+  --color: #202020;
+  --darkmode-hover: #292a2d;
+  --darkmode-white: #d9d9d9;
+}
+
+:root[color-theme="dark"] {
+  --background: #1e1f21;
+  --nav: #292a2d;
+  --color: #d9d9d9;
+  --darkmode-hover: #50535d;
+  --darkmode-white: #d9d9d9;
+}
+
+html {
+  background: var(--background);
+}
+
+input[id="darkmode__btn"] + label {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 36px;
+  right: 112px;
+  z-index: 10;
+  width: 148px;
+  height: 40px;
+  font-size: var(--font-micro);
+  color: var(--color);
+  text-align: center;
+  background-color: var(--nav);
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+input[id="darkmode__btn"]:hover + label {
+  background-color: var(--darkmode-hover);
+  color: var(--darkmode-white);
+}
+
+input[id="darkmode__btn"] {
+  display: none;
+}
+
+.fa-moon,
+.fa-lightbulb {
+  margin-right: 6px;
+}
