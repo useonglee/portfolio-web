@@ -28,16 +28,3 @@
   border: 1px solid var(--color-white);
   border-radius: var(--size-border-radius);
 }
-
-/* Section Common */
-.section {
-  margin: auto;
-  max-width: 1200px;
-  height: 100vh;
-  padding: 60px;
-  text-align: center;
-}
-
-.section > p {
-  margin: 20px 0 40px 0;
-}
