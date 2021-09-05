@@ -44,7 +44,7 @@
       <!-- Navbar -->
       <nav id="navbar">
         <img src="images/logo.png" alt="Portfolio's logo" />
-        <div class="navbar__menu">
+        <section class="navbar__menu">
           <ul class="navbar__menu-list">
             <li class="navbar__menu__item active" data-link="#home">Home</li>
             <li class="navbar__menu__item" data-link="#about">About</li>
@@ -55,14 +55,14 @@
             </li>
             <li class="navbar__menu__item" data-link="#contact">Contact</li>
           </ul>
-        </div>
+        </section>
         <button class="navbar__toggle-btn">
           <i class="fas fa-bars"></i>
         </button>
       </nav>
 
       <!-- Home -->
-      <section id="home" class="snap">
+      <article id="home" class="snap">
         <img
           src="images/profile.png"
           alt="Useong's profile photo"
@@ -76,34 +76,34 @@
           있습니다.
         </h2>
         <button class="home__contact">CONTACT ME</button>
-      </section>
+      </article>
 
       <!-- About -->
-      <section id="about" class="section snap">
+      <article id="about" class="article snap">
         <h1>About</h1>
         <p>소개글</p>
-        <div class="about__container">
-          <div class="about__question">
-            <div class="about__question-title">Question</div>
+        <section class="about__container">
+          <section class="about__question">
+            <h2 class="about__question-title">Question</h2>
             <div class="about__question content">
               <div class="content-question">Q. 개발자가 되고 싶은 이유가 무엇인가요?</div>
               <div class="content-answer"></div>
               <div class="content-question">Q. 왜 프론트엔드 개발자가 되고 싶은가요?</div>
               <div class="content-answer"></div>
             </div>
-          </div>
-          <div class="about__education">
-            <div class="about__education-title">Education</div>
+          </section>
+          <section class="about__education">
+            <h2 class="about__education-title">Education</h2>
             <div class="about__education content"></div>
-          </div>
-        </div>
-      </section>
+          </section>
+        </section>
+      </article>
 
       <!-- Skills -->
-      <section id="skills" class="section snap">
+      <article id="skills" class="article snap">
         <h1>Skills</h1>
         <p></p>
-        <div class="skillset">
+        <section class="skillset">
           <div class="skillset__left">
             <h3 class="skillset__title">Strong</h3>
             <div class="skill">
@@ -163,14 +163,14 @@
               </ul>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </article>
 
       <!-- Project -->
-      <section id="project" class="section snap">
+      <article id="project" class="article snap">
         <h1>Projects</h1>
         <p>소개글</p>
-        <div class="project__categories">
+        <section class="project__categories">
           <button class="category__btn active" data-filter="*">All</button>
           <button class="category__btn" data-filter="final-project">
             Final Project
@@ -181,20 +181,20 @@
           <button class="category__btn" data-filter="persnal-project">
             Personal Project
           </button>
-        </div>
+        </section>
 
-        <div class="project__items">
+        <section class="project__items">
           <a href="" class="project" target="_blank" data-type="final-project">
             <img
               src="images/project_reciper.png"
               alt="Reciper"
               class="project__img"
             />
-            <div class="project__description">
+            <section class="project__description">
               <h3>Reciper</h3>
               <span>팀원모집 서비스와 실시간 협업툴을 제공하는 플랫폼</span>
               <span>더 자세히 보려면 클릭하세요!</span>
-            </div>
+            </section>
           </a>
           <a href="" class="project" target="_blank" data-type="first-project">
             <img
@@ -202,14 +202,14 @@
               alt="Trollo"
               class="project__img"
             />
-            <div class="project__description">
+            <section class="project__description">
               <h3>Trollo</h3>
               <span>
                 칸반보드를 통해 일정을 관리하고 게시글을 통해 다른 사용자와
                 공유하는 플랫폼
               </span>
               <span>더 자세히 보려면 클릭하세요!</span>
-            </div>
+            </section>
           </a>
           <a
             href=""
@@ -222,20 +222,20 @@
               alt="Portfolio"
               class="project__img"
             />
-            <div class="project__description">
+            <section class="project__description">
               <h3>Useong's Portfolio</h3>
               <span>나를 가장 잘 나타낼 수 있는 포트폴리오 웹 사이트</span>
               <span>더 자세히 보려면 클릭하세요!</span>
-            </div>
+            </section>
           </a>
-        </div>
-      </section>
+        </section>
+      </article>
 
       <!-- Testimonials -->
-      <section id="testimonials" class="section snap">
+      <article id="testimonials" class="article snap">
         <h1>Testimonials</h1>
         <p>코드스테이츠 수강 중에 만났던 페어분들의 피드백입니다.</p>
-        <div id="slide__wrap">
+        <section id="slide__wrap">
           <div class="slide__box">
             <div class="slide__list">
               <div class="slide__content slide01">
@@ -579,19 +579,19 @@
             </div>
           </div>
         </section>
-      </section>
+      </article>
 
       <!-- Contact -->
-      <section id="contact" class="section snap">
+      <article id="contact" class="article snap">
         <h1 class="contact__title">Let's talk</h1>
         <h2 class="contact__email">useong0830@naver.com</h2>
-        <div class="contact__links">
+        <section class="contact__links">
           <a href="" target="_blank">
             <i class="fab fa-github"></i>
           </a>
-        </div>
+        </section>
         <p class="contact__rights">2021 Useong Lee - All rights reserved</p>
-      </section>
+      </article>
 
       <!-- Dark Mode -->
         <input id="darkmode__btn" type="checkbox"></input>
