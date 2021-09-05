@@ -109,8 +109,8 @@ p {
   scroll-snap-align: center;
 }
 
-/* Section Common */
-.section {
+/* article Common */
+.article {
   margin: auto;
   max-width: 1200px;
   height: 100vh;
@@ -119,12 +119,12 @@ p {
   text-align: center;
 }
 
-.section > p {
+.article > p {
   margin: 20px 0 40px 0;
   color: var(--color);
 }
 
-.section > h1 {
+.article > h1 {
   color: var(--color);
 }
 
