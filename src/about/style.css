@@ -23,7 +23,7 @@
   padding: 8px 32px;
   line-height: 1.7rem;
   text-align: left;
-  border: 1px solid var(--darkmode-border-color);
+  border: 1px solid var(--darkmode-white);
   border-radius: var(--size-border-radius);
 }
 
@@ -57,7 +57,7 @@
   width: 100%;
   margin-bottom: 10px;
   font-size: var(--font-micro);
-  border-bottom: 1px solid var(--darkmode-border-color);
+  border-bottom: 1px solid var(--darkmode-white);
 }
 
 .visible {
