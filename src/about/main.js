@@ -3,6 +3,7 @@
 const aboutObserverCallback = (entries) => {
   entries.forEach((entry) => {
     const { target } = entry;
+
     if (entry.isIntersecting) {
       target.classList.add("visible");
       observer.unobserve(target);
@@ -15,7 +16,7 @@ const aboutObserverCallback = (entries) => {
 const aboutObserverOptions = {
   root: null,
   rootMargin: "0px",
-  threshold: 0.9,
+  threshold: 0.3,
 };
 
 const aboutObserver = new IntersectionObserver(
