@@ -71,31 +71,29 @@ button {
 /* ========== Typography ========== */
 h1 {
   line-height: 1.2em;
-  margin: 16px 0px;
+  margin: 40px 0 8px 0;
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
-  color: var(--color-black);
+  color: var(--color);
 }
 
 h2 {
-  margin: 8px 0px;
-  font-size: var(--font-semi-medium);
+  margin-bottom: 16px;
+  font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
-  color: var(--color-black);
+  color: var(--color);
 }
 
 h3 {
-  margin: 8px 0px;
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
-  color: var(--color-black);
+  color: var(--color);
 }
 
 p {
-  margin: 4px 0px;
-  font-size: var(--font-regular);
+  font-size: var(--font-small);
   font-weight: var(--weight-regular);
-  color: var(--color-black);
+  color: var(--color);
 }
 
 /* ========== scroll snap ========== */
@@ -111,6 +109,7 @@ p {
 
 /* article Common */
 .article {
+  position: relative;
   margin: auto;
   max-width: 1200px;
   height: 100vh;
@@ -119,11 +118,7 @@ p {
   text-align: center;
 }
 
-.article > p {
-  margin: 20px 0 40px 0;
-  color: var(--color);
-}
-
+.article > p,
 .article > h1 {
   color: var(--color);
 }
