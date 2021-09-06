@@ -28,7 +28,7 @@ input[id="darkmode__btn"] + label {
   justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 43px;
+  bottom: 32px;
   right: 112px;
   z-index: 10;
   width: 148px;
