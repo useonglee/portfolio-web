@@ -19,6 +19,10 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- billboad.js -->
+    <link rel="stylesheet" href="https://naver.github.io/billboard.js/release/latest/dist/theme/datalab.min.css">
+    <script src="https://naver.github.io/billboard.js/release/latest/dist/billboard.pkgd.min.js"></script>
+
     <!-- link -->
     <link rel="icon" type="image/png" href="images/favicon.png" />
 
@@ -28,6 +32,7 @@
     <link rel="stylesheet" href="./src/navbar/style.css" />
     <link rel="stylesheet" href="./src/home/style.css" />
     <link rel="stylesheet" href="./src/about/style.css">
+    <link rel="stylesheet" href="./src/skills/style.css">
     <link rel="stylesheet" href="./src/project/style.css" />
     <link rel="stylesheet" href="./src/testimonials/style.css" />
 
@@ -36,6 +41,7 @@
     <script src="./src/navbar/main.js" defer></script>
     <script src="./src/home/main.js" defer></script>
     <script src="./src/about/main.js" defer></script>
+    <script src="./src/skills/main.js" defer></script>
     <script src="./src/project/main.js" defer></script>
     <script src="./src/testimonials/main.js" defer></script>
   </head>
@@ -163,26 +169,27 @@
       <!-- Skills -->
       <article id="skills" class="article snap">
         <h1>Skills</h1>
-        <p></p>
+        <p>제가 보유하고 있는 스킬들을 소개합니다!</p>
         <section class="skillset">
           <div class="skillset__left">
-            <h3 class="skillset__title">Strong</h3>
-            <div class="skill">
-              <div class="skill__description">
-                <span>Javascript</span>
-                <span>90%</span>
+            <section class="skillset__strong">
+              <h3 class="skillset__title">Strong</h3>
+              <div class="skill">
+                <div class="skill__description">
+                  <span>Javascript</span>
+                  <span>90%</span>
+                </div>
+                <div class="skill__bar">
+                  <div class="skill__value" style="width: 90%"></div>
+                </div>
               </div>
-              <div class="skill__bar">
-                <div class="skill__value"></div>
-              </div>
-            </div>
             <div class="skill">
               <div class="skill__description">
                 <span>React</span>
                 <span>95%</span>
               </div>
               <div class="skill__bar">
-                <div class="skill__value"></div>
+                <div class="skill__value" style="width: 95%"></div>
               </div>
             </div>
             <div class="skill">
@@ -191,7 +198,7 @@
                 <span>85%</span>
               </div>
               <div class="skill__bar">
-                <div class="skill__value"></div>
+                <div class="skill__value" style="width: 85%"></div>
               </div>
             </div>
             <div class="skill">
@@ -200,37 +207,45 @@
                 <span>90%</span>
               </div>
               <div class="skill__bar">
-                <div class="skill__value"></div>
+                <div class="skill__value" style="width: 90%"></div>
               </div>
             </div>
-          </div>
-          <div class="skillset__right">
-            <div class="knowledgeable">
-              <h3 class="skillset__title">Knowledgeable</h3>
-              <ul class="knowledgeable__list">
-                <li><span>Typescript</span></li>
-                <li><span>Node.js</span></li>
-                <li><span>Express</span></li>
-                <li><span>MySQL</span></li>
-              </ul>
+            </section>
+            <div class="skillset__knowledgeable-container">
+              <section class="skillset__knowledgeable">
+                <h3 class="skillset__bottom-title">Knowledgeable</h3>
+                <ul class="knowledgeable__list">
+                  <li><span>Typescript</span></li>
+                  <li><span>Node.js</span></li>
+                  <li><span>Express</span></li>
+                  <li><span>MySQL</span></li>
+                </ul>
+              </section>
+              <section class="skillset__etc">
+                <h3 class="skillset__bottom-title">Etc</h3>
+                <ul class="etc__list">
+                  <li><span>Git</span></li>
+                  <li><span>AWS S3</span></li>
+                  <li><span>Notion</span></li>
+                  <li><span>Figma</span></li>
+                </ul>
+              </section>
             </div>
-            <div class="etc">
-              <h3 class="skillset__title">Etc</h3>
-              <ul class="etc__list">
-                <li><span>Git</span></li>
-                <li><span>AWS S3</span></li>
-                <li><span>Notion</span></li>
-                <li><span>Figma</span></li>
-              </ul>
-            </div>
           </div>
+          <section class="skillset__right">
+            <div id="radarChart"></div>
+          </section>
+        </section>
+        <section class="lineChart__container">
+          <h3 class="skillset__title">Learning Curve</h3>
+          <div id="lineChart"></div>
         </section>
       </article>
 
       <!-- Project -->
       <article id="project" class="article snap">
         <h1>Projects</h1>
-        <p>소개글</p>
+        <p>코드 스테이츠 수강 중에 진행한 프로젝트입니다.</p>
         <section class="project__categories">
           <button class="category__btn active" data-filter="*">All</button>
           <button class="category__btn" data-filter="final-project">
