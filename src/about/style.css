@@ -20,7 +20,7 @@
 /* ========== About Content ========== */
 .content {
   height: 100%;
-  padding: 8px 32px;
+  padding: 12px 40px;
   line-height: 1.7rem;
   text-align: left;
   border: 1px solid var(--darkmode-white);
@@ -30,7 +30,6 @@
 /* ========== Question ========== */
 .question__content-question {
   margin: 24px 0 8px 0;
-  font-weight: var(--weight-semi-bold);
 }
 
 /* ========== Education ========== */
@@ -45,12 +44,8 @@
 }
 
 .education__content-date {
-  margin-right: 32px;
+  margin-right: 60px;
   font-size: var(--font-micro);
-}
-
-.education__content-title {
-  font-weight: var(--weight-semi-bold);
 }
 
 .education__content-description {
@@ -60,8 +55,10 @@
   border-bottom: 1px solid var(--darkmode-white);
 }
 
-.visible {
+/* ========== intersection observer ========== */
+.about__visible {
   opacity: 1;
   transition: all 0.5s ease-in-out;
+  transition-delay: 0.5s;
   transform: translate3d(0, -30%, 0);
 }

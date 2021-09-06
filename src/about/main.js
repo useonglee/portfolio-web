@@ -5,10 +5,10 @@ const aboutObserverCallback = (entries) => {
     const { target } = entry;
 
     if (entry.isIntersecting) {
-      target.classList.add("visible");
+      target.classList.add("about__visible");
       observer.unobserve(target);
     } else {
-      target.classList.remove("visible");
+      target.classList.remove("about__visible");
     }
   });
 };
