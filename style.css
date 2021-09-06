@@ -79,14 +79,12 @@ h1 {
 
 h2 {
   margin-bottom: 16px;
-  font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   color: var(--color);
 }
 
 h3 {
-  font-size: var(--font-regular);
-  font-weight: var(--weight-regular);
+  font-weight: var(--weight-semi-bold);
   color: var(--color);
 }
 
@@ -111,7 +109,7 @@ p {
 .article {
   position: relative;
   margin: auto;
-  max-width: 1200px;
+  max-width: 1300px;
   height: 100vh;
   padding: 60px;
   color: var(--color);
