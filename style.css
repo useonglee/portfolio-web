@@ -24,6 +24,7 @@
   --font-micro: 14px;
 
   /* Font weight */
+  --weight-max-bold: 800;
   --weight-bold: 700;
   --weight-semi-bold: 600;
   --weight-regular: 400;
