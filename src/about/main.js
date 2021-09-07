@@ -6,7 +6,8 @@ const aboutObserverCallback = (entries) => {
 
     if (entry.isIntersecting) {
       target.classList.add("about__visible");
-      observer.unobserve(target);
+      aboutObserver.unobserve(target);
+      
     } else {
       target.classList.remove("about__visible");
     }
@@ -23,6 +24,7 @@ const aboutObserver = new IntersectionObserver(
   aboutObserverCallback,
   aboutObserverOptions
 );
+
 const aboutContainer = document.querySelector(".about__container");
 
 aboutObserver.observe(aboutContainer);
