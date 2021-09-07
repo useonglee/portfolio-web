@@ -134,11 +134,13 @@ const skillsObserverCallback = (entries) => {
       if (className === 'skillset') {
         target.classList.add("skillset__visible");
         loadRadarChart();
+
       } else {
         target.classList.add("lineChart__visible");
         loadLineChart();
       }
-      observer.unobserve(target);
+      skillsObserver.unobserve(target);
+
     } else {
       if (className === 'skillset') {
         target.classList.remove("skillset__visible");
