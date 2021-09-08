@@ -92,4 +92,4 @@ setTimeout(() => {
 
 setTimeout(() => {
   divider.style.display = "none";
-}, 3000);
+}, 2800);
