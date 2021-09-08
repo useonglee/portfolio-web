@@ -265,50 +265,59 @@
         </section>
 
         <section class="project__items">
-          <a href="" class="project" target="_blank" data-type="final-project">
+          <div class="project" target="_blank" data-type="final-project">
             <img
               src="images/project_reciper.png"
-              alt="Reciper"
+              alt="Final Project - Reciper"
               class="project__img"
+              style="width: 100%; height: 100%;"
+              loading="lazy"
             />
             <section class="project__description">
               <h3>Reciper</h3>
-              <span>팀원모집 서비스와 실시간 협업툴을 제공하는 플랫폼</span>
-              <span>더 자세히 보려면 클릭하세요!</span>
+              <span>팀원 모집부터 협업까지! 토이 프로젝트의 A to Z!</span>
+              <a href="https://reciper.me" target="_blank">
+                배포 사이트 가기 <i class="fas fa-long-arrow-alt-right"></i>
+              </a>
+              <a href="https://github.com/codestates/Reciper-client" target="_blank">
+                깃헙 보러가기 <i class="fas fa-long-arrow-alt-right"></i>
+              </a>
             </section>
-          </a>
-          <a href="" class="project" target="_blank" data-type="first-project">
+          </div>
+          <div class="project" data-type="first-project">
             <img
               src="images/project_trollo.jpg"
-              alt="Trollo"
+              alt="First Project - Trollo"
               class="project__img"
+              style="max-width: 100%; height: 100%;"
+              loading="lazy"
             />
             <section class="project__description">
               <h3>Trollo</h3>
               <span>
-                칸반보드를 통해 일정을 관리하고 게시글을 통해 다른 사용자와
-                공유하는 플랫폼
+                칸반보드로 일정을 관리하고 게시판에 공유해 보세요!
               </span>
-              <span>더 자세히 보려면 클릭하세요!</span>
+              <a href="https://github.com/codestates/Trollo-client" target="_blank">
+                깃헙 보러가기 <i class="fas fa-long-arrow-alt-right"></i>
+              </a>
             </section>
-          </a>
-          <a
-            href=""
-            class="project"
-            target="_blank"
-            data-type="persnal-project"
-          >
+          </div>
+          <div class="project" data-type="persnal-project">
             <img
               src="images/project_portfolio.png"
-              alt="Portfolio"
+              alt="Personal Project - Portfolio website"
               class="project__img"
+              style="width: 100%; height: 100%;"
+              loading="lazy"
             />
             <section class="project__description">
               <h3>Useong's Portfolio</h3>
               <span>나를 가장 잘 나타낼 수 있는 포트폴리오 웹 사이트</span>
-              <span>더 자세히 보려면 클릭하세요!</span>
+              <a href="https://github.com/useonglee/Portfolio-LeeUseong" target="_blank">
+                깃헙 보러가기 <i class="fas fa-long-arrow-alt-right"></i>
+              </a>
             </section>
-          </a>
+          </div>
         </section>
       </article>
 
@@ -693,7 +702,7 @@
     </main>
   </body>
   <!-- same site policy -->
-  <script>    
+  <script>
     document.cookie = 'same-site-cookie=foo; SameSite=Lax';
     document.cookie = 'cross-site-cookie=bar; SameSite=None; Secure';
   </script>
