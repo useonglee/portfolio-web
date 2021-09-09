@@ -1,5 +1,7 @@
 "use strict";
 
+import { intersectionObserver } from "../observerAPI.js";
+
 // TODO: Home 높이
 const home = document.querySelector("#home");
 const homeHeight = home.getBoundingClientRect().height;
@@ -29,7 +31,7 @@ container.addEventListener("scroll", () => {
     arrowUp.classList.remove("visible");
     mainMessage.style.display = "block";
     subMessage.style.display = "block";
-    wheelNotice.style.display = "none";
+    wheelNotice.style.display = "block";
   }
 });
 
@@ -37,58 +39,16 @@ arrowUp.addEventListener("click", () => {
   scrollIntoView("#home");
 });
 
-// TODO: 화면 디바이더
-const divider = document.querySelector(".divider");
-
 // TODO: intersectionObserver API
-const homeObserverCallback = (entries) => {
-  entries.forEach((entry) => {
-    const { target } = entry;
-    const className = target.className.split(" ")[0];
-
-    if (entry.isIntersecting) {
-      if (className === "main__message") {
-        target.classList.add("mainMessage__visible");
-      } else if (className === "sub__message") {
-        target.classList.add("subMessage__visible");
-      } else if (className === "home__contact") {
-        target.classList.add("contactBtn__visible")
-      } else {
-        target.classList.add("wheelNotice__visible");
-      }
-      homeObserver.unobserve(target);
-
-    } else {
-      if (className === "main__message") {
-        target.classList.remove("mainMessage__visible");
-      } else if (className === "sub__message") {
-        target.classList.remove("subMessage__visible");
-      } else if (className === "home__contact") {
-        target.classList.remove("contactBtn__visible")
-      } else {
-        target.classList.remove("wheelNotice__visible");
-      }
-    }
-  });
-};
-
-const homeObserverOptions = {
-  root: null,
-  rootMargin: "0px",
-  threshold: 1,
-};
-
-const homeObserver = new IntersectionObserver(
-  homeObserverCallback,
-  homeObserverOptions
-);
-
 setTimeout(() => {
-  homeObserver.observe(mainMessage);
-  homeObserver.observe(subMessage);
-  homeObserver.observe(homeContact);
-  homeObserver.observe(wheelNotice);
+  intersectionObserver(mainMessage, "mainMessage__visible", 1, null);
+  intersectionObserver(subMessage, "subMessage__visible", 1, null);
+  intersectionObserver(homeContact, "contactBtn__visible", 1, null);
+  intersectionObserver(wheelNotice, "wheelNotice__visible", 1, null);
 }, 2100);
+
+// TODO: 홈 화면 디바이더
+const divider = document.querySelector(".divider");
 
 setTimeout(() => {
   divider.style.display = "none";

@@ -1,5 +1,7 @@
 "use strict";
 
+import { intersectionObserver } from "../observerAPI.js";
+
 // TODO: radar Type
 const radarChart = bb.generate({
   size: {
@@ -41,7 +43,7 @@ const radarChart = bb.generate({
   bindto: "#radarChart"
 });
 
-function loadRadarChart() {
+const loadRadarChart = () => {
   setTimeout(function() {
     radarChart.load({
       columns: [
@@ -90,7 +92,7 @@ const lineChart = bb.generate({
   bindto: "#lineChart"
 });
 
-function loadLineChart() {
+const loadLineChart = () => {
   setTimeout(function() {
     lineChart.load({
       columns: [
@@ -125,45 +127,8 @@ function loadLineChart() {
 }
 
 // TODO: intersectionObserver API
-const skillsObserverCallback = (entries) => {
-  entries.forEach((entry) => {
-    const { target } = entry;
-    const className = target.className.split(' ')[0];
-
-    if (entry.isIntersecting) {
-      if (className === 'skillset') {
-        target.classList.add("skillset__visible");
-        loadRadarChart();
-
-      } else {
-        target.classList.add("lineChart__visible");
-        loadLineChart();
-      }
-      skillsObserver.unobserve(target);
-
-    } else {
-      if (className === 'skillset') {
-        target.classList.remove("skillset__visible");
-      } else {
-        target.classList.remove("lineChart__visible");
-      }
-    }
-  });
-};
-
-const skillsObserverOptions = {
-  root: null,
-  rootMargin: "0px",
-  threshold: 0.3,
-};
-
-const skillsObserver = new IntersectionObserver(
-  skillsObserverCallback,
-  skillsObserverOptions
-);
-
 const skillsetContainer = document.querySelector(".skillset");
 const lineChartContainer = document.querySelector(".lineChart__container");
 
-skillsObserver.observe(skillsetContainer);
-skillsObserver.observe(lineChartContainer);
+intersectionObserver(skillsetContainer, "skillset__visible", 0.3, loadRadarChart);
+intersectionObserver(lineChartContainer, "lineChart__visible", 0.3, loadLineChart);
