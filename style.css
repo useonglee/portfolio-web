@@ -106,8 +106,8 @@ p {
   scroll-snap-align: center;
 }
 
-/* article Common */
-.article {
+/* section Common */
+.section {
   position: relative;
   margin: auto;
   max-width: 1300px;
@@ -117,15 +117,13 @@ p {
   text-align: center;
 }
 
-.article > p,
-.article > h1 {
+.section > p,
+.section > h1 {
   color: var(--color);
 }
 
 /* ========== Arrow up ========== */
 .arrow-up {
-  opacity: 0;
-  pointer-events: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -133,7 +131,6 @@ p {
   position: fixed;
   bottom: 32px;
   right: 52px;
-  transition: var(--animation-duration) ease-in-out;
   width: 40px;
   height: 40px;
   font-size: var(--font-small);
@@ -141,11 +138,6 @@ p {
   border-radius: 50%;
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
   background-color: var(--nav);
-}
-
-.arrow-up.visible {
-  opacity: 1;
-  pointer-events: auto;
 }
 
 .arrow-up:hover {
