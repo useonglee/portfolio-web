@@ -1,0 +1,54 @@
+@import "../../style.css";
+
+.contact__container {
+  opacity: 0;
+  display: flex;
+  position: absolute;
+  top: 320px;
+  left: 172px;
+  max-width: 1000px;
+  height: 460px;
+  padding: 60px 80px;
+}
+
+.contact__left-img {
+  flex-basis: 50%;
+}
+
+.contact__right-info {
+  flex-basis: 50%;
+  margin-left: 52px;
+  font-size: var(--font-regular);
+  color: var(--color);
+  text-align: left;
+}
+
+.contact__right-info > h3 {
+  margin-top: 8px;
+  font-size: 24px;
+  color: var(--color-purple);
+}
+
+.contact__right-info > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 28px 0;
+}
+
+.fa-envelope, .fa-sms {
+  margin-right: 4px;
+}
+
+.contact__rights{
+  position:absolute;
+  left: 40%;
+  bottom: 40px;
+}
+
+/* ========== intersection observer ========== */
+.contact__visible {
+  opacity: 1;
+  transition: all 0.5s ease-in-out 0.3s;
+  transform: translate3d(0, -30%, 0); 
+}
