@@ -42,7 +42,10 @@ export default class About extends Component {
   }
 
   setEvent() {
-    const { aboutObserver } = this.$props;
-    aboutObserver();
+    const { scheduling } = this.$props;
+ 
+    scheduling(() => {
+      this.intersectionObserver("#about__container", "about__visible", 0.3, null)
+    }, 0);
   }
 }
