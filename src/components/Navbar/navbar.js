@@ -1,11 +1,11 @@
 "use strict";
 
 // TODO: 스크롤 내리면 navbar 배경이 보이게 해준다.
-const app = document.querySelector("#app");
-const navbar = document.querySelector("#navbar");
-const navbarHeight = navbar.getBoundingClientRect().height;
 
 app.addEventListener("scroll", () => {
+  const navbar = document.querySelector("#navbar");
+  const navbarHeight = navbar.getBoundingClientRect().height;
+
   if (app.scrollTop > navbarHeight) {
     navbar.classList.add("navbar--open");
   } else {
@@ -40,7 +40,7 @@ navbarToggleBtn.addEventListener("click", () => {
 const sectionIds = [
   "#home",
   "#about",
-  // "#skills",
+  "#skills",
   // "#project",
   // "#testimonials",
   // "#contact",
@@ -87,8 +87,7 @@ const navObserverCallback = (entries) => {
         selectedNavIndex = index - 1;
       }
 
-      selectNavItem(navItems[selectedNavIndex])
-      // setTimeout(() => selectNavItem(navItems[selectedNavIndex]), 400);
+      selectNavItem(navItems[selectedNavIndex]);
     }
   });
 };
@@ -106,14 +105,14 @@ setTimeout(() => {
   sections.forEach((section) => navObserver.observe(section));
 }, 100);
 
-app.addEventListener("wheel", () => {
-  // 스크롤이 맨 위에 있다면 home 메뉴 활성화
-  if (app.scrollTop === 0) {
-    selectedNavIndex = 0;
-  } else if (4745 < app.scrollTop) {
-    // 스크롤이 맨 밑에 있다면 contact 메뉴 활성화
-    selectedNavIndex = navItems.length - 1;
-  }
+// app.addEventListener("wheel", () => {
+//   // 스크롤이 맨 위에 있다면 home 메뉴 활성화
+//   if (app.scrollTop === 0) {
+//     selectedNavIndex = 0;
+//   } else if (4745 < app.scrollTop) {
+//     // 스크롤이 맨 밑에 있다면 contact 메뉴 활성화
+//     selectedNavIndex = navItems.length - 1;
+//   }
 
-  selectNavItem(navItems[selectedNavIndex]);
-});
+//   selectNavItem(navItems[selectedNavIndex]);
+// });
