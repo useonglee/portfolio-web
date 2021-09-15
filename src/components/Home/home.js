@@ -27,44 +27,37 @@ export default class Home extends Component {
   setEvent() {
     // TODO: Contact me 버튼 클릭시, Contact 메뉴로 이동
     this.addEvent("click", ".home__contact", () => {
-      this.scrollIntoView("#contact");
+      scrollIntoView("#contact");
     });
 
-    this.addEvent("scroll", "#app", () => {
-      // TODO: Home 높이
-      const home = document.querySelector("#home");
-      const homeHeight = home.getBoundingClientRect().height;
+    const asyncOperation = async() => {
+      // TODO: Home Observer
+      await promise(() => {
+        this.intersectionObserver('.main__message', "mainMessage__visible", 1, null);
+        this.intersectionObserver(".sub__message", "subMessage__visible", 1, null);
+        this.intersectionObserver(".home__contact", "contactBtn__visible", 1, null);
+        this.intersectionObserver(".wheel__notice", "wheelNotice__visible", 1, null);
+      }, 2000);
 
-      // TODO: Home 메시지
-      const mainMessage = document.querySelector(".main__message");
-      const subMessage = document.querySelector(".sub__message");
-      const wheelNotice = document.querySelector(".wheel__notice");
-
-      if (app.scrollTop > homeHeight / 2) {
-        mainMessage.style.display = "none";
-        subMessage.style.display = "none";
-        wheelNotice.style.display = "none";
-      } else {
-        mainMessage.style.display = "block";
-        subMessage.style.display = "block";
-        wheelNotice.style.display = "block";
-      }
-    });
-
-    // TODO: Timer
-    setTimeout(() => {
-      this.intersectionObserver('.main__message', "mainMessage__visible", 1, null);
-      this.intersectionObserver(".sub__message", "subMessage__visible", 1, null);
-      this.intersectionObserver(".home__contact", "contactBtn__visible", 1, null);
-      this.intersectionObserver(".wheel__notice", "wheelNotice__visible", 1, null);
-    }, 2000);
-
-    setTimeout(() => {
       // TODO: 홈 화면 디바이더
-      const divider = document.querySelector(".divider");
+      await promise(() => {
+        const divider = document.querySelector(".divider");
+        divider.style.display = "none";
+      }, 3000)
+    };
 
-      divider.style.display = "none";
-    }, 3000);
+    const promise = (callback, delay) => {
+      return new Promise((resolve, reject) => {
+        try {
+          resolve(setTimeout(callback, delay));
+        }
+        catch {
+          reject(err => console.log(err));
+        }
+      });
+    }
+
+    asyncOperation();
   }
 }
 
