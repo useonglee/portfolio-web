@@ -79,14 +79,12 @@
 
 /* ========== intersection observer ========== */
 .skillset__visible {
-  opacity: 1;
   transition: all 0.5s ease-in-out;
   transition-delay: 0.5s;
   transform: translate3d(0, -40%, 0);
 }
 
 .lineChart__visible {
-  opacity: 1;
   transition: all 0.5s ease-in-out;
   transition-delay: 1s;
   transform: translate3d(0, -30%, 0);
