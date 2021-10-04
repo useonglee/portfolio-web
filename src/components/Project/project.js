@@ -77,10 +77,11 @@ export default class Project extends Component {
   }
 
   setEvent() {
-    const doc = document;
     const { scheduling } = this.$props;
 
     scheduling(() => {
+      const doc = document;
+
       // TODO: 프로젝트 메뉴 필터링 기능
       const projectCategoriesBtn = doc.querySelector(".project__categories");
       const projcetItems = doc.querySelector(".project__items");
