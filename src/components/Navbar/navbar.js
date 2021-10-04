@@ -40,7 +40,6 @@ export default class Navbar extends Component {
       //   }
       // })
 
-      console.log(app);
       app.addEventListener("scroll", () => {
         console.log(app.scrollTop, navbarHeight);
         if (app.scrollTop > navbarHeight) {
@@ -76,8 +75,8 @@ export default class Navbar extends Component {
         "#about",
         "#skills",
         "#project",
-        // "#testimonials",
-        // "#contact",
+        "#testimonials",
+        "#contact",
       ];
       
       const navItems = sectionIds.map((id) =>
