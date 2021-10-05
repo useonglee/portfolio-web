@@ -9,10 +9,9 @@ export default class Home extends Component {
           <p class="sub__message-one">
             항상 긍정적 사고를 하며, 팀에게 동기부여를 할 수 있는 프론트엔드 개발자 이우성입니다!
           </p>
-          <button class="home__contact">CONTACT ME</button>
         </div>
         <div class="wheel__notice">
-          <p>휠을 천천히 내려주세요</p>
+          <p>천천히 내려주세요</p>
           <img src="images/wheel_down.gif" alt="Instructions to down the wheel" />
         </div>
       </div>
@@ -25,17 +24,11 @@ export default class Home extends Component {
   }
 
   setEvent() {
-    // TODO: Contact me 버튼 클릭시, Contact 메뉴로 이동
-    this.addEvent("click", ".home__contact", () => {
-      scrollIntoView("#contact");
-    });
-
     const asyncOperation = async() => {
       // TODO: Home Observer
       await promise(() => {
         this.intersectionObserver('.main__message', "mainMessage__visible", 1, null);
         this.intersectionObserver(".sub__message", "subMessage__visible", 1, null);
-        this.intersectionObserver(".home__contact", "contactBtn__visible", 1, null);
         this.intersectionObserver(".wheel__notice", "wheelNotice__visible", 1, null);
       }, 2000);
 

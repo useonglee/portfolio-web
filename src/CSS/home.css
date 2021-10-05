@@ -38,7 +38,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 460px;
+  top: 420px;
 }
 
 .sub__message-one {
@@ -52,17 +52,6 @@
   font-size: 20px;
   font-weight: var(--weight-max-bold);
   color: var(--color-white);
-}
-
-.home__contact {
-  opacity: 0;
-  margin-top: 52px;
-  padding: 8px 12px;
-  font-weight: var(--weight-bold);
-  color: var(--color-white);
-  border: 1px solid var(--darkmode-white);
-  border-radius: var(--size-border-radius);
-  background-color: transparent;
 }
 
 .divider {
@@ -141,11 +130,6 @@
 .subMessage__visible {
   transition: all 0.5s ease-in-out 0.5s;
   transform: translate3d(0, -50%, 0); 
-}
-
-.contactBtn__visible {
-  transition: all 0.5s ease-in-out 1s;
-  transform: translate3d(0, -70%, 0); 
 }
 
 .wheelNotice__visible {
