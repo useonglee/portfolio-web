@@ -4,13 +4,16 @@ const path = require("path");
 
 module.exports = {
   entry: {
-    navbar: "./src/navbar/main.js",
-    home: "./src/home/main.js",
-    about: "./src/about/main.js",
-    // skills: "./src/skills/main.js",
-    project: "./src/project/main.js",
-    testimonials: "./src/testimonials/main.js",
-    // contact: "./src/contact/main.js",
+    app: "./src/components/App.js",
+    main: "./src/components/Main.js",
+    navbar: "./src/components/Navbar/navbar.js",
+    dark: "./src/components/Dark/dark.js",
+    home: "./src/components/Home/home.js",
+    about: "./src/components/About/about.js",
+    skills: "./src/components/Skills/skills.js",
+    project: "./src/components/Project/project.js",
+    testimonials: "./src/components/Testimonials/testimonials.js",
+    contact: "./src/components/Contact/contact.js",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
